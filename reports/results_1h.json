@@ -1,0 +1,1726 @@
+{
+  "modes": {
+    "onset": {
+      "frozen_config": {
+        "max_iter": 150,
+        "max_leaf_nodes": 31,
+        "window_days": 365,
+        "learning_rate": 0.1,
+        "min_samples_leaf": 200,
+        "l2_regularization": 1.0
+      },
+      "tuning_table": [
+        {
+          "max_iter": 100,
+          "max_leaf_nodes": 15,
+          "window_days": 365,
+          "learning_rate": 0.1,
+          "min_samples_leaf": 200,
+          "l2_regularization": 1.0,
+          "brier_per_tuning_fold": [
+            0.11570353822586915,
+            0.14082873938022378
+          ],
+          "brier_mean": 0.12826613880304646
+        },
+        {
+          "max_iter": 100,
+          "max_leaf_nodes": 15,
+          "window_days": 730,
+          "learning_rate": 0.1,
+          "min_samples_leaf": 200,
+          "l2_regularization": 1.0,
+          "brier_per_tuning_fold": [
+            0.11618664140398552,
+            0.1411893036804351
+          ],
+          "brier_mean": 0.12868797254221032
+        },
+        {
+          "max_iter": 100,
+          "max_leaf_nodes": 15,
+          "window_days": null,
+          "learning_rate": 0.1,
+          "min_samples_leaf": 200,
+          "l2_regularization": 1.0,
+          "brier_per_tuning_fold": [
+            0.11652828650173327,
+            0.14155529226994493
+          ],
+          "brier_mean": 0.1290417893858391
+        },
+        {
+          "max_iter": 150,
+          "max_leaf_nodes": 31,
+          "window_days": 365,
+          "learning_rate": 0.1,
+          "min_samples_leaf": 200,
+          "l2_regularization": 1.0,
+          "brier_per_tuning_fold": [
+            0.11580105357215378,
+            0.14071691198188657
+          ],
+          "brier_mean": 0.1282589827770202
+        },
+        {
+          "max_iter": 150,
+          "max_leaf_nodes": 31,
+          "window_days": 730,
+          "learning_rate": 0.1,
+          "min_samples_leaf": 200,
+          "l2_regularization": 1.0,
+          "brier_per_tuning_fold": [
+            0.11579221255295885,
+            0.14103049982369872
+          ],
+          "brier_mean": 0.12841135618832877
+        },
+        {
+          "max_iter": 150,
+          "max_leaf_nodes": 31,
+          "window_days": null,
+          "learning_rate": 0.1,
+          "min_samples_leaf": 200,
+          "l2_regularization": 1.0,
+          "brier_per_tuning_fold": [
+            0.11647219757036585,
+            0.1410482885872611
+          ],
+          "brier_mean": 0.12876024307881348
+        },
+        {
+          "max_iter": 200,
+          "max_leaf_nodes": 63,
+          "window_days": 365,
+          "learning_rate": 0.1,
+          "min_samples_leaf": 200,
+          "l2_regularization": 1.0,
+          "brier_per_tuning_fold": [
+            0.1164337202178753,
+            0.14131592081095623
+          ],
+          "brier_mean": 0.12887482051441576
+        },
+        {
+          "max_iter": 200,
+          "max_leaf_nodes": 63,
+          "window_days": 730,
+          "learning_rate": 0.1,
+          "min_samples_leaf": 200,
+          "l2_regularization": 1.0,
+          "brier_per_tuning_fold": [
+            0.11604937287959245,
+            0.14122553602148633
+          ],
+          "brier_mean": 0.1286374544505394
+        },
+        {
+          "max_iter": 200,
+          "max_leaf_nodes": 63,
+          "window_days": null,
+          "learning_rate": 0.1,
+          "min_samples_leaf": 200,
+          "l2_regularization": 1.0,
+          "brier_per_tuning_fold": [
+            0.1161792577960767,
+            0.14086133870571133
+          ],
+          "brier_mean": 0.128520298250894
+        }
+      ],
+      "folds": [
+        {
+          "fold": "tune1",
+          "used_for_tuning": true,
+          "train_t_utc": [
+            "2025-07-22 14:00:00+00:00",
+            "2026-07-22 13:30:00+00:00"
+          ],
+          "test_t_utc": [
+            "2026-07-22 15:00:00+00:00",
+            "2026-08-19 14:30:00+00:00"
+          ],
+          "gap_slots": 2,
+          "n_train": 378107,
+          "train_pos_rate": 0.1484976474913186,
+          "metrics": {
+            "model": {
+              "n": 28883,
+              "n_pos": 5155,
+              "pos_rate": 0.17847868988678461,
+              "pr_auc": 0.48548303890436256,
+              "brier": 0.11580105357215378,
+              "ece": 0.007640142367886717
+            },
+            "persistence": {
+              "n": 28883,
+              "n_pos": 5155,
+              "pos_rate": 0.17847868988678461,
+              "pr_auc": 0.17847868988678461,
+              "brier": 0.17847868988678461,
+              "ece": 0.17847868988678461
+            },
+            "slot_dow": {
+              "n": 28883,
+              "n_pos": 5155,
+              "pos_rate": 0.17847868988678461,
+              "pr_auc": 0.4321979933915401,
+              "brier": 0.1233391456098802,
+              "ece": 0.032727450323056274
+            },
+            "recent_24h": {
+              "n": 28883,
+              "n_pos": 5155,
+              "pos_rate": 0.17847868988678461,
+              "pr_auc": 0.43640768140630015,
+              "brier": 0.12011213215863241,
+              "ece": 0.018224057452095998
+            }
+          },
+          "calibration_model": [
+            {
+              "n": 2889,
+              "mean_pred": 0.00444,
+              "obs_rate": 0.00173
+            },
+            {
+              "n": 2888,
+              "mean_pred": 0.00896,
+              "obs_rate": 0.00277
+            },
+            {
+              "n": 2888,
+              "mean_pred": 0.02206,
+              "obs_rate": 0.01593
+            },
+            {
+              "n": 2888,
+              "mean_pred": 0.06094,
+              "obs_rate": 0.06752
+            },
+            {
+              "n": 2888,
+              "mean_pred": 0.10429,
+              "obs_rate": 0.1018
+            },
+            {
+              "n": 2889,
+              "mean_pred": 0.15548,
+              "obs_rate": 0.16199
+            },
+            {
+              "n": 2888,
+              "mean_pred": 0.21846,
+              "obs_rate": 0.22576
+            },
+            {
+              "n": 2888,
+              "mean_pred": 0.28966,
+              "obs_rate": 0.29778
+            },
+            {
+              "n": 2888,
+              "mean_pred": 0.37332,
+              "obs_rate": 0.35215
+            },
+            {
+              "n": 2889,
+              "mean_pred": 0.5481,
+              "obs_rate": 0.55729
+            }
+          ]
+        },
+        {
+          "fold": "tune2",
+          "used_for_tuning": true,
+          "train_t_utc": [
+            "2025-08-19 14:00:00+00:00",
+            "2026-08-19 13:30:00+00:00"
+          ],
+          "test_t_utc": [
+            "2026-08-19 15:00:00+00:00",
+            "2026-09-16 14:30:00+00:00"
+          ],
+          "gap_slots": 2,
+          "n_train": 377499,
+          "train_pos_rate": 0.152906365314875,
+          "metrics": {
+            "model": {
+              "n": 28239,
+              "n_pos": 6312,
+              "pos_rate": 0.22352066291299266,
+              "pr_auc": 0.5134877236312518,
+              "brier": 0.14071691198188657,
+              "ece": 0.015312864036054247
+            },
+            "persistence": {
+              "n": 28239,
+              "n_pos": 6312,
+              "pos_rate": 0.22352066291299266,
+              "pr_auc": 0.22352066291299266,
+              "brier": 0.22352066291299266,
+              "ece": 0.22352066291299266
+            },
+            "slot_dow": {
+              "n": 28239,
+              "n_pos": 6312,
+              "pos_rate": 0.22352066291299266,
+              "pr_auc": 0.4570877326425896,
+              "brier": 0.1546431448442595,
+              "ece": 0.07068344488902943
+            },
+            "recent_24h": {
+              "n": 28239,
+              "n_pos": 6312,
+              "pos_rate": 0.22352066291299266,
+              "pr_auc": 0.46910029628430583,
+              "brier": 0.1454324199027238,
+              "ece": 0.02415703717966879
+            }
+          },
+          "calibration_model": [
+            {
+              "n": 2824,
+              "mean_pred": 0.00561,
+              "obs_rate": 0.00673
+            },
+            {
+              "n": 2824,
+              "mean_pred": 0.01468,
+              "obs_rate": 0.01452
+            },
+            {
+              "n": 2824,
+              "mean_pred": 0.04377,
+              "obs_rate": 0.05772
+            },
+            {
+              "n": 2824,
+              "mean_pred": 0.10028,
+              "obs_rate": 0.14802
+            },
+            {
+              "n": 2823,
+              "mean_pred": 0.14837,
+              "obs_rate": 0.1672
+            },
+            {
+              "n": 2824,
+              "mean_pred": 0.20087,
+              "obs_rate": 0.21813
+            },
+            {
+              "n": 2824,
+              "mean_pred": 0.2625,
+              "obs_rate": 0.28506
+            },
+            {
+              "n": 2824,
+              "mean_pred": 0.33022,
+              "obs_rate": 0.33534
+            },
+            {
+              "n": 2824,
+              "mean_pred": 0.41997,
+              "obs_rate": 0.40085
+            },
+            {
+              "n": 2824,
+              "mean_pred": 0.59434,
+              "obs_rate": 0.60163
+            }
+          ]
+        },
+        {
+          "fold": "final",
+          "used_for_tuning": false,
+          "train_t_utc": [
+            "2025-09-16 14:00:00+00:00",
+            "2026-09-16 13:30:00+00:00"
+          ],
+          "test_t_utc": [
+            "2026-09-16 15:00:00+00:00",
+            "2026-10-14 14:30:00+00:00"
+          ],
+          "gap_slots": 2,
+          "n_train": 376569,
+          "train_pos_rate": 0.1606053605049805,
+          "metrics": {
+            "model": {
+              "n": 28179,
+              "n_pos": 7097,
+              "pos_rate": 0.2518542176798325,
+              "pr_auc": 0.5309193091239851,
+              "brier": 0.15436750204517596,
+              "ece": 0.015083718339828698
+            },
+            "persistence": {
+              "n": 28179,
+              "n_pos": 7097,
+              "pos_rate": 0.2518542176798325,
+              "pr_auc": 0.2518542176798325,
+              "brier": 0.2518542176798325,
+              "ece": 0.2518542176798325
+            },
+            "slot_dow": {
+              "n": 28179,
+              "n_pos": 7097,
+              "pos_rate": 0.2518542176798325,
+              "pr_auc": 0.46059061146434904,
+              "brier": 0.17609783212400182,
+              "ece": 0.09055117151262732
+            },
+            "recent_24h": {
+              "n": 28179,
+              "n_pos": 7097,
+              "pos_rate": 0.2518542176798325,
+              "pr_auc": 0.49773551567859065,
+              "brier": 0.15846423731666892,
+              "ece": 0.02776451620296439
+            }
+          },
+          "calibration_model": [
+            {
+              "n": 2818,
+              "mean_pred": 0.0063,
+              "obs_rate": 0.00568
+            },
+            {
+              "n": 2818,
+              "mean_pred": 0.03097,
+              "obs_rate": 0.05323
+            },
+            {
+              "n": 2818,
+              "mean_pred": 0.09598,
+              "obs_rate": 0.12101
+            },
+            {
+              "n": 2818,
+              "mean_pred": 0.14273,
+              "obs_rate": 0.19446
+            },
+            {
+              "n": 2817,
+              "mean_pred": 0.18188,
+              "obs_rate": 0.19702
+            },
+            {
+              "n": 2818,
+              "mean_pred": 0.22416,
+              "obs_rate": 0.23031
+            },
+            {
+              "n": 2818,
+              "mean_pred": 0.27278,
+              "obs_rate": 0.27857
+            },
+            {
+              "n": 2818,
+              "mean_pred": 0.3354,
+              "obs_rate": 0.32576
+            },
+            {
+              "n": 2818,
+              "mean_pred": 0.44889,
+              "obs_rate": 0.45813
+            },
+            {
+              "n": 2818,
+              "mean_pred": 0.65961,
+              "obs_rate": 0.65436
+            }
+          ],
+          "calibration_all": {
+            "model": [
+              {
+                "n": 2818,
+                "mean_pred": 0.0063,
+                "obs_rate": 0.00568
+              },
+              {
+                "n": 2818,
+                "mean_pred": 0.03097,
+                "obs_rate": 0.05323
+              },
+              {
+                "n": 2818,
+                "mean_pred": 0.09598,
+                "obs_rate": 0.12101
+              },
+              {
+                "n": 2818,
+                "mean_pred": 0.14273,
+                "obs_rate": 0.19446
+              },
+              {
+                "n": 2817,
+                "mean_pred": 0.18188,
+                "obs_rate": 0.19702
+              },
+              {
+                "n": 2818,
+                "mean_pred": 0.22416,
+                "obs_rate": 0.23031
+              },
+              {
+                "n": 2818,
+                "mean_pred": 0.27278,
+                "obs_rate": 0.27857
+              },
+              {
+                "n": 2818,
+                "mean_pred": 0.3354,
+                "obs_rate": 0.32576
+              },
+              {
+                "n": 2818,
+                "mean_pred": 0.44889,
+                "obs_rate": 0.45813
+              },
+              {
+                "n": 2818,
+                "mean_pred": 0.65961,
+                "obs_rate": 0.65436
+              }
+            ],
+            "slot_dow": [
+              {
+                "n": 2684,
+                "mean_pred": 0.00232,
+                "obs_rate": 0.02794
+              },
+              {
+                "n": 2867,
+                "mean_pred": 0.01556,
+                "obs_rate": 0.0722
+              },
+              {
+                "n": 2891,
+                "mean_pred": 0.03181,
+                "obs_rate": 0.15773
+              },
+              {
+                "n": 2816,
+                "mean_pred": 0.06386,
+                "obs_rate": 0.19105
+              },
+              {
+                "n": 2823,
+                "mean_pred": 0.10247,
+                "obs_rate": 0.23875
+              },
+              {
+                "n": 2806,
+                "mean_pred": 0.14591,
+                "obs_rate": 0.30328
+              },
+              {
+                "n": 2828,
+                "mean_pred": 0.19276,
+                "obs_rate": 0.29915
+              },
+              {
+                "n": 2826,
+                "mean_pred": 0.25063,
+                "obs_rate": 0.32024
+              },
+              {
+                "n": 2817,
+                "mean_pred": 0.33014,
+                "obs_rate": 0.32375
+              },
+              {
+                "n": 2821,
+                "mean_pred": 0.48798,
+                "obs_rate": 0.57887
+              }
+            ],
+            "recent_24h": [
+              {
+                "n": 3815,
+                "mean_pred": 0.0,
+                "obs_rate": 0.01913
+              },
+              {
+                "n": 3988,
+                "mean_pred": 0.06162,
+                "obs_rate": 0.11384
+              },
+              {
+                "n": 2780,
+                "mean_pred": 0.12109,
+                "obs_rate": 0.16906
+              },
+              {
+                "n": 2780,
+                "mean_pred": 0.15972,
+                "obs_rate": 0.2036
+              },
+              {
+                "n": 2584,
+                "mean_pred": 0.19748,
+                "obs_rate": 0.22368
+              },
+              {
+                "n": 2403,
+                "mean_pred": 0.23438,
+                "obs_rate": 0.26633
+              },
+              {
+                "n": 4124,
+                "mean_pred": 0.29573,
+                "obs_rate": 0.29074
+              },
+              {
+                "n": 2603,
+                "mean_pred": 0.4289,
+                "obs_rate": 0.44449
+              },
+              {
+                "n": 3102,
+                "mean_pred": 0.64477,
+                "obs_rate": 0.63185
+              }
+            ]
+          },
+          "per_oblast": [
+            {
+              "oblast": "Cherkaska oblast",
+              "n": 1128,
+              "n_pos": 264,
+              "pos_rate": 0.23404,
+              "model_pr_auc": 0.2412,
+              "model_brier": 0.1822,
+              "slot_dow_pr_auc": 0.22981,
+              "slot_dow_brier": 0.19703
+            },
+            {
+              "oblast": "Chernihivska oblast",
+              "n": 1136,
+              "n_pos": 263,
+              "pos_rate": 0.23151,
+              "model_pr_auc": 0.26997,
+              "model_brier": 0.18009,
+              "slot_dow_pr_auc": 0.24012,
+              "slot_dow_brier": 0.18917
+            },
+            {
+              "oblast": "Chernivetska oblast",
+              "n": 1278,
+              "n_pos": 77,
+              "pos_rate": 0.06025,
+              "model_pr_auc": 0.13948,
+              "model_brier": 0.05576,
+              "slot_dow_pr_auc": 0.06744,
+              "slot_dow_brier": 0.05856
+            },
+            {
+              "oblast": "Dnipropetrovska oblast",
+              "n": 1068,
+              "n_pos": 747,
+              "pos_rate": 0.69944,
+              "model_pr_auc": 0.75685,
+              "model_brier": 0.20681,
+              "slot_dow_pr_auc": 0.75614,
+              "slot_dow_brier": 0.25641
+            },
+            {
+              "oblast": "Donetska oblast",
+              "n": 1167,
+              "n_pos": 179,
+              "pos_rate": 0.15338,
+              "model_pr_auc": 0.29468,
+              "model_brier": 0.12146,
+              "slot_dow_pr_auc": 0.2292,
+              "slot_dow_brier": 0.12807
+            },
+            {
+              "oblast": "Ivano-Frankivska oblast",
+              "n": 1304,
+              "n_pos": 23,
+              "pos_rate": 0.01764,
+              "model_pr_auc": 0.06489,
+              "model_brier": 0.01697,
+              "slot_dow_pr_auc": 0.02346,
+              "slot_dow_brier": 0.01744
+            },
+            {
+              "oblast": "Kharkivska oblast",
+              "n": 1024,
+              "n_pos": 668,
+              "pos_rate": 0.65234,
+              "model_pr_auc": 0.72736,
+              "model_brier": 0.2224,
+              "slot_dow_pr_auc": 0.70983,
+              "slot_dow_brier": 0.2415
+            },
+            {
+              "oblast": "Khersonska oblast",
+              "n": 1181,
+              "n_pos": 198,
+              "pos_rate": 0.16765,
+              "model_pr_auc": 0.21221,
+              "model_brier": 0.1421,
+              "slot_dow_pr_auc": 0.2085,
+              "slot_dow_brier": 0.14816
+            },
+            {
+              "oblast": "Khmelnytska oblast",
+              "n": 1265,
+              "n_pos": 125,
+              "pos_rate": 0.09881,
+              "model_pr_auc": 0.14533,
+              "model_brier": 0.08893,
+              "slot_dow_pr_auc": 0.09382,
+              "slot_dow_brier": 0.09539
+            },
+            {
+              "oblast": "Kirovohradska oblast",
+              "n": 1102,
+              "n_pos": 369,
+              "pos_rate": 0.33485,
+              "model_pr_auc": 0.33166,
+              "model_brier": 0.22773,
+              "slot_dow_pr_auc": 0.325,
+              "slot_dow_brier": 0.2592
+            },
+            {
+              "oblast": "Kyiv City",
+              "n": 1198,
+              "n_pos": 257,
+              "pos_rate": 0.21452,
+              "model_pr_auc": 0.21462,
+              "model_brier": 0.17372,
+              "slot_dow_pr_auc": 0.24512,
+              "slot_dow_brier": 0.18568
+            },
+            {
+              "oblast": "Kyivska oblast",
+              "n": 1127,
+              "n_pos": 599,
+              "pos_rate": 0.5315,
+              "model_pr_auc": 0.59201,
+              "model_brier": 0.24864,
+              "slot_dow_pr_auc": 0.55545,
+              "slot_dow_brier": 0.39029
+            },
+            {
+              "oblast": "Lvivska oblast",
+              "n": 1239,
+              "n_pos": 235,
+              "pos_rate": 0.18967,
+              "model_pr_auc": 0.3105,
+              "model_brier": 0.14677,
+              "slot_dow_pr_auc": 0.20017,
+              "slot_dow_brier": 0.16274
+            },
+            {
+              "oblast": "Mykolaivska oblast",
+              "n": 1053,
+              "n_pos": 607,
+              "pos_rate": 0.57645,
+              "model_pr_auc": 0.58148,
+              "model_brier": 0.25141,
+              "slot_dow_pr_auc": 0.59397,
+              "slot_dow_brier": 0.34262
+            },
+            {
+              "oblast": "Odeska oblast",
+              "n": 1206,
+              "n_pos": 415,
+              "pos_rate": 0.34411,
+              "model_pr_auc": 0.40442,
+              "model_brier": 0.2243,
+              "slot_dow_pr_auc": 0.3648,
+              "slot_dow_brier": 0.24323
+            },
+            {
+              "oblast": "Poltavska oblast",
+              "n": 1116,
+              "n_pos": 369,
+              "pos_rate": 0.33065,
+              "model_pr_auc": 0.36586,
+              "model_brier": 0.22137,
+              "slot_dow_pr_auc": 0.33776,
+              "slot_dow_brier": 0.2317
+            },
+            {
+              "oblast": "Rivnenska oblast",
+              "n": 1257,
+              "n_pos": 178,
+              "pos_rate": 0.14161,
+              "model_pr_auc": 0.18252,
+              "model_brier": 0.12163,
+              "slot_dow_pr_auc": 0.138,
+              "slot_dow_brier": 0.13473
+            },
+            {
+              "oblast": "Sumska oblast",
+              "n": 1117,
+              "n_pos": 379,
+              "pos_rate": 0.3393,
+              "model_pr_auc": 0.4201,
+              "model_brier": 0.22114,
+              "slot_dow_pr_auc": 0.40524,
+              "slot_dow_brier": 0.22398
+            },
+            {
+              "oblast": "Ternopilska oblast",
+              "n": 1135,
+              "n_pos": 61,
+              "pos_rate": 0.05374,
+              "model_pr_auc": 0.21669,
+              "model_brier": 0.04746,
+              "slot_dow_pr_auc": 0.07917,
+              "slot_dow_brier": 0.05218
+            },
+            {
+              "oblast": "Vinnytska oblast",
+              "n": 1252,
+              "n_pos": 272,
+              "pos_rate": 0.21725,
+              "model_pr_auc": 0.32962,
+              "model_brier": 0.1653,
+              "slot_dow_pr_auc": 0.21048,
+              "slot_dow_brier": 0.20147
+            },
+            {
+              "oblast": "Volynska oblast",
+              "n": 1161,
+              "n_pos": 237,
+              "pos_rate": 0.20413,
+              "model_pr_auc": 0.26549,
+              "model_brier": 0.16031,
+              "slot_dow_pr_auc": 0.18594,
+              "slot_dow_brier": 0.16998
+            },
+            {
+              "oblast": "Zakarpatska oblast",
+              "n": 1344,
+              "n_pos": 0,
+              "pos_rate": 0.0,
+              "model_pr_auc": NaN,
+              "model_brier": 9e-05,
+              "slot_dow_pr_auc": NaN,
+              "slot_dow_brier": 0.0003
+            },
+            {
+              "oblast": "Zaporizka oblast",
+              "n": 1127,
+              "n_pos": 272,
+              "pos_rate": 0.24135,
+              "model_pr_auc": 0.37575,
+              "model_brier": 0.17561,
+              "slot_dow_pr_auc": 0.33218,
+              "slot_dow_brier": 0.17888
+            },
+            {
+              "oblast": "Zhytomyrska oblast",
+              "n": 1194,
+              "n_pos": 303,
+              "pos_rate": 0.25377,
+              "model_pr_auc": 0.3026,
+              "model_brier": 0.19048,
+              "slot_dow_pr_auc": 0.25935,
+              "slot_dow_brier": 0.22501
+            }
+          ]
+        }
+      ],
+      "window_comparison_final_fold_post_hoc": [
+        {
+          "window_days": 365,
+          "n_train": 376569,
+          "pos_rate": 0.2518542176798325,
+          "pr_auc": 0.5309193091239851,
+          "brier": 0.15436750204517596,
+          "ece": 0.015083718339828698
+        },
+        {
+          "window_days": 730,
+          "n_train": 754622,
+          "pos_rate": 0.2518542176798325,
+          "pr_auc": 0.5324078742768656,
+          "brier": 0.15437013911397124,
+          "ece": 0.014329210519027457
+        },
+        {
+          "window_days": null,
+          "n_train": 1710645,
+          "pos_rate": 0.2518542176798325,
+          "pr_auc": 0.5256734825051103,
+          "brier": 0.15518162032511112,
+          "ece": 0.015278493419824821
+        }
+      ]
+    },
+    "continuation": {
+      "frozen_config": {
+        "max_iter": 100,
+        "max_leaf_nodes": 15,
+        "window_days": 365,
+        "learning_rate": 0.1,
+        "min_samples_leaf": 200,
+        "l2_regularization": 1.0
+      },
+      "tuning_table": [
+        {
+          "max_iter": 100,
+          "max_leaf_nodes": 15,
+          "window_days": 365,
+          "learning_rate": 0.1,
+          "min_samples_leaf": 200,
+          "l2_regularization": 1.0,
+          "brier_per_tuning_fold": [
+            0.1717378173750792,
+            0.17751042364271244
+          ],
+          "brier_mean": 0.1746241205088958
+        },
+        {
+          "max_iter": 100,
+          "max_leaf_nodes": 15,
+          "window_days": 730,
+          "learning_rate": 0.1,
+          "min_samples_leaf": 200,
+          "l2_regularization": 1.0,
+          "brier_per_tuning_fold": [
+            0.1745743930286663,
+            0.179796052418555
+          ],
+          "brier_mean": 0.17718522272361065
+        },
+        {
+          "max_iter": 100,
+          "max_leaf_nodes": 15,
+          "window_days": null,
+          "learning_rate": 0.1,
+          "min_samples_leaf": 200,
+          "l2_regularization": 1.0,
+          "brier_per_tuning_fold": [
+            0.17574410533663756,
+            0.18197924375691263
+          ],
+          "brier_mean": 0.1788616745467751
+        },
+        {
+          "max_iter": 150,
+          "max_leaf_nodes": 31,
+          "window_days": 365,
+          "learning_rate": 0.1,
+          "min_samples_leaf": 200,
+          "l2_regularization": 1.0,
+          "brier_per_tuning_fold": [
+            0.17470875613814169,
+            0.17993005259640343
+          ],
+          "brier_mean": 0.17731940436727256
+        },
+        {
+          "max_iter": 150,
+          "max_leaf_nodes": 31,
+          "window_days": 730,
+          "learning_rate": 0.1,
+          "min_samples_leaf": 200,
+          "l2_regularization": 1.0,
+          "brier_per_tuning_fold": [
+            0.17587314511985874,
+            0.17921163759803485
+          ],
+          "brier_mean": 0.17754239135894678
+        },
+        {
+          "max_iter": 150,
+          "max_leaf_nodes": 31,
+          "window_days": null,
+          "learning_rate": 0.1,
+          "min_samples_leaf": 200,
+          "l2_regularization": 1.0,
+          "brier_per_tuning_fold": [
+            0.1751416215956485,
+            0.18173542014950272
+          ],
+          "brier_mean": 0.1784385208725756
+        },
+        {
+          "max_iter": 200,
+          "max_leaf_nodes": 63,
+          "window_days": 365,
+          "learning_rate": 0.1,
+          "min_samples_leaf": 200,
+          "l2_regularization": 1.0,
+          "brier_per_tuning_fold": [
+            0.1792452390478931,
+            0.1849707441971173
+          ],
+          "brier_mean": 0.18210799162250518
+        },
+        {
+          "max_iter": 200,
+          "max_leaf_nodes": 63,
+          "window_days": 730,
+          "learning_rate": 0.1,
+          "min_samples_leaf": 200,
+          "l2_regularization": 1.0,
+          "brier_per_tuning_fold": [
+            0.17951459673408726,
+            0.18079477331842883
+          ],
+          "brier_mean": 0.18015468502625803
+        },
+        {
+          "max_iter": 200,
+          "max_leaf_nodes": 63,
+          "window_days": null,
+          "learning_rate": 0.1,
+          "min_samples_leaf": 200,
+          "l2_regularization": 1.0,
+          "brier_per_tuning_fold": [
+            0.17738580391799438,
+            0.18158547155199006
+          ],
+          "brier_mean": 0.1794856377349922
+        }
+      ],
+      "folds": [
+        {
+          "fold": "tune1",
+          "used_for_tuning": true,
+          "train_t_utc": [
+            "2025-07-22 14:00:00+00:00",
+            "2026-07-22 13:30:00+00:00"
+          ],
+          "test_t_utc": [
+            "2026-07-22 15:00:00+00:00",
+            "2026-08-19 14:30:00+00:00"
+          ],
+          "gap_slots": 2,
+          "n_train": 42373,
+          "train_pos_rate": 0.3241686923276615,
+          "metrics": {
+            "model": {
+              "n": 3373,
+              "n_pos": 1067,
+              "pos_rate": 0.3163356062852061,
+              "pr_auc": 0.6464627975336982,
+              "brier": 0.1717378173750792,
+              "ece": 0.021335455176200446
+            },
+            "persistence": {
+              "n": 3373,
+              "n_pos": 1067,
+              "pos_rate": 0.3163356062852061,
+              "pr_auc": 0.3163356062852061,
+              "brier": 0.6836643937147939,
+              "ece": 0.6836643937147939
+            },
+            "slot_dow": {
+              "n": 3373,
+              "n_pos": 1067,
+              "pos_rate": 0.3163356062852061,
+              "pr_auc": 0.44688127930781946,
+              "brier": 0.206479639320834,
+              "ece": 0.033109958388293566
+            },
+            "recent_24h": {
+              "n": 3373,
+              "n_pos": 1067,
+              "pos_rate": 0.3163356062852061,
+              "pr_auc": 0.5556434544937761,
+              "brier": 0.19444946280329817,
+              "ece": 0.08362362959847106
+            }
+          },
+          "calibration_model": [
+            {
+              "n": 338,
+              "mean_pred": 0.1173,
+              "obs_rate": 0.17751
+            },
+            {
+              "n": 337,
+              "mean_pred": 0.15651,
+              "obs_rate": 0.17507
+            },
+            {
+              "n": 337,
+              "mean_pred": 0.18293,
+              "obs_rate": 0.18991
+            },
+            {
+              "n": 337,
+              "mean_pred": 0.20633,
+              "obs_rate": 0.18694
+            },
+            {
+              "n": 337,
+              "mean_pred": 0.23218,
+              "obs_rate": 0.20178
+            },
+            {
+              "n": 338,
+              "mean_pred": 0.26131,
+              "obs_rate": 0.23077
+            },
+            {
+              "n": 337,
+              "mean_pred": 0.29757,
+              "obs_rate": 0.29674
+            },
+            {
+              "n": 337,
+              "mean_pred": 0.34988,
+              "obs_rate": 0.36202
+            },
+            {
+              "n": 337,
+              "mean_pred": 0.4647,
+              "obs_rate": 0.47774
+            },
+            {
+              "n": 338,
+              "mean_pred": 0.8428,
+              "obs_rate": 0.86391
+            }
+          ]
+        },
+        {
+          "fold": "tune2",
+          "used_for_tuning": true,
+          "train_t_utc": [
+            "2025-08-19 14:00:00+00:00",
+            "2026-08-19 13:30:00+00:00"
+          ],
+          "test_t_utc": [
+            "2026-08-19 15:00:00+00:00",
+            "2026-09-16 14:30:00+00:00"
+          ],
+          "gap_slots": 2,
+          "n_train": 42981,
+          "train_pos_rate": 0.32311951792652566,
+          "metrics": {
+            "model": {
+              "n": 4017,
+              "n_pos": 1218,
+              "pos_rate": 0.3032113517550411,
+              "pr_auc": 0.5892172104997956,
+              "brier": 0.17751042364271244,
+              "ece": 0.019975198748051384
+            },
+            "persistence": {
+              "n": 4017,
+              "n_pos": 1218,
+              "pos_rate": 0.3032113517550411,
+              "pr_auc": 0.3032113517550411,
+              "brier": 0.6967886482449589,
+              "ece": 0.6967886482449589
+            },
+            "slot_dow": {
+              "n": 4017,
+              "n_pos": 1218,
+              "pos_rate": 0.3032113517550411,
+              "pr_auc": 0.49301842799838325,
+              "brier": 0.19428789918465003,
+              "ece": 0.04355960890272634
+            },
+            "recent_24h": {
+              "n": 4017,
+              "n_pos": 1218,
+              "pos_rate": 0.3032113517550411,
+              "pr_auc": 0.489531447054671,
+              "brier": 0.19826944247246492,
+              "ece": 0.07844265970293195
+            }
+          },
+          "calibration_model": [
+            {
+              "n": 402,
+              "mean_pred": 0.12258,
+              "obs_rate": 0.18905
+            },
+            {
+              "n": 402,
+              "mean_pred": 0.15992,
+              "obs_rate": 0.18159
+            },
+            {
+              "n": 401,
+              "mean_pred": 0.18284,
+              "obs_rate": 0.21945
+            },
+            {
+              "n": 402,
+              "mean_pred": 0.20251,
+              "obs_rate": 0.199
+            },
+            {
+              "n": 401,
+              "mean_pred": 0.22296,
+              "obs_rate": 0.21446
+            },
+            {
+              "n": 402,
+              "mean_pred": 0.24714,
+              "obs_rate": 0.25373
+            },
+            {
+              "n": 402,
+              "mean_pred": 0.27862,
+              "obs_rate": 0.26368
+            },
+            {
+              "n": 401,
+              "mean_pred": 0.31888,
+              "obs_rate": 0.30923
+            },
+            {
+              "n": 402,
+              "mean_pred": 0.39877,
+              "obs_rate": 0.39801
+            },
+            {
+              "n": 402,
+              "mean_pred": 0.77245,
+              "obs_rate": 0.80348
+            }
+          ]
+        },
+        {
+          "fold": "final",
+          "used_for_tuning": false,
+          "train_t_utc": [
+            "2025-09-16 14:00:00+00:00",
+            "2026-09-16 13:30:00+00:00"
+          ],
+          "test_t_utc": [
+            "2026-09-16 15:00:00+00:00",
+            "2026-10-14 14:30:00+00:00"
+          ],
+          "gap_slots": 2,
+          "n_train": 43911,
+          "train_pos_rate": 0.3185306642982396,
+          "metrics": {
+            "model": {
+              "n": 4077,
+              "n_pos": 1139,
+              "pos_rate": 0.2793720873191072,
+              "pr_auc": 0.5608776574229203,
+              "brier": 0.16999286086244278,
+              "ece": 0.018021253920843514
+            },
+            "persistence": {
+              "n": 4077,
+              "n_pos": 1139,
+              "pos_rate": 0.2793720873191072,
+              "pr_auc": 0.2793720873191072,
+              "brier": 0.7206279126808928,
+              "ece": 0.7206279126808928
+            },
+            "slot_dow": {
+              "n": 4077,
+              "n_pos": 1139,
+              "pos_rate": 0.2793720873191072,
+              "pr_auc": 0.4468586653627656,
+              "brier": 0.19511071285188597,
+              "ece": 0.07071651114094268
+            },
+            "recent_24h": {
+              "n": 4077,
+              "n_pos": 1139,
+              "pos_rate": 0.2793720873191072,
+              "pr_auc": 0.4348197399819206,
+              "brier": 0.191748830755717,
+              "ece": 0.07898475279949783
+            }
+          },
+          "calibration_model": [
+            {
+              "n": 408,
+              "mean_pred": 0.1326,
+              "obs_rate": 0.17892
+            },
+            {
+              "n": 408,
+              "mean_pred": 0.16586,
+              "obs_rate": 0.17157
+            },
+            {
+              "n": 407,
+              "mean_pred": 0.18561,
+              "obs_rate": 0.15479
+            },
+            {
+              "n": 408,
+              "mean_pred": 0.20137,
+              "obs_rate": 0.21324
+            },
+            {
+              "n": 407,
+              "mean_pred": 0.21684,
+              "obs_rate": 0.20885
+            },
+            {
+              "n": 408,
+              "mean_pred": 0.23457,
+              "obs_rate": 0.22059
+            },
+            {
+              "n": 408,
+              "mean_pred": 0.25952,
+              "obs_rate": 0.2451
+            },
+            {
+              "n": 407,
+              "mean_pred": 0.29377,
+              "obs_rate": 0.28501
+            },
+            {
+              "n": 408,
+              "mean_pred": 0.35695,
+              "obs_rate": 0.37745
+            },
+            {
+              "n": 408,
+              "mean_pred": 0.71793,
+              "obs_rate": 0.73775
+            }
+          ],
+          "calibration_all": {
+            "model": [
+              {
+                "n": 408,
+                "mean_pred": 0.1326,
+                "obs_rate": 0.17892
+              },
+              {
+                "n": 408,
+                "mean_pred": 0.16586,
+                "obs_rate": 0.17157
+              },
+              {
+                "n": 407,
+                "mean_pred": 0.18561,
+                "obs_rate": 0.15479
+              },
+              {
+                "n": 408,
+                "mean_pred": 0.20137,
+                "obs_rate": 0.21324
+              },
+              {
+                "n": 407,
+                "mean_pred": 0.21684,
+                "obs_rate": 0.20885
+              },
+              {
+                "n": 408,
+                "mean_pred": 0.23457,
+                "obs_rate": 0.22059
+              },
+              {
+                "n": 408,
+                "mean_pred": 0.25952,
+                "obs_rate": 0.2451
+              },
+              {
+                "n": 407,
+                "mean_pred": 0.29377,
+                "obs_rate": 0.28501
+              },
+              {
+                "n": 408,
+                "mean_pred": 0.35695,
+                "obs_rate": 0.37745
+              },
+              {
+                "n": 408,
+                "mean_pred": 0.71793,
+                "obs_rate": 0.73775
+              }
+            ],
+            "slot_dow": [
+              {
+                "n": 406,
+                "mean_pred": 0.12716,
+                "obs_rate": 0.20197
+              },
+              {
+                "n": 400,
+                "mean_pred": 0.16357,
+                "obs_rate": 0.2675
+              },
+              {
+                "n": 404,
+                "mean_pred": 0.19063,
+                "obs_rate": 0.20792
+              },
+              {
+                "n": 410,
+                "mean_pred": 0.2139,
+                "obs_rate": 0.20244
+              },
+              {
+                "n": 413,
+                "mean_pred": 0.24136,
+                "obs_rate": 0.24939
+              },
+              {
+                "n": 411,
+                "mean_pred": 0.27198,
+                "obs_rate": 0.25061
+              },
+              {
+                "n": 407,
+                "mean_pred": 0.31003,
+                "obs_rate": 0.25553
+              },
+              {
+                "n": 403,
+                "mean_pred": 0.36786,
+                "obs_rate": 0.24318
+              },
+              {
+                "n": 415,
+                "mean_pred": 0.47151,
+                "obs_rate": 0.31325
+              },
+              {
+                "n": 408,
+                "mean_pred": 0.734,
+                "obs_rate": 0.60049
+              }
+            ],
+            "recent_24h": [
+              {
+                "n": 360,
+                "mean_pred": 0.04855,
+                "obs_rate": 0.17222
+              },
+              {
+                "n": 266,
+                "mean_pred": 0.08333,
+                "obs_rate": 0.20301
+              },
+              {
+                "n": 310,
+                "mean_pred": 0.10417,
+                "obs_rate": 0.22581
+              },
+              {
+                "n": 655,
+                "mean_pred": 0.13569,
+                "obs_rate": 0.27328
+              },
+              {
+                "n": 370,
+                "mean_pred": 0.16667,
+                "obs_rate": 0.27838
+              },
+              {
+                "n": 350,
+                "mean_pred": 0.1875,
+                "obs_rate": 0.27143
+              },
+              {
+                "n": 318,
+                "mean_pred": 0.20833,
+                "obs_rate": 0.30189
+              },
+              {
+                "n": 572,
+                "mean_pred": 0.23864,
+                "obs_rate": 0.23601
+              },
+              {
+                "n": 406,
+                "mean_pred": 0.27997,
+                "obs_rate": 0.24877
+              },
+              {
+                "n": 470,
+                "mean_pred": 0.52598,
+                "obs_rate": 0.51915
+              }
+            ]
+          },
+          "per_oblast": [
+            {
+              "oblast": "Cherkaska oblast",
+              "n": 216,
+              "n_pos": 68,
+              "pos_rate": 0.31481,
+              "model_pr_auc": 0.40729,
+              "model_brier": 0.21393,
+              "slot_dow_pr_auc": 0.30425,
+              "slot_dow_brier": 0.2251
+            },
+            {
+              "oblast": "Chernihivska oblast",
+              "n": 208,
+              "n_pos": 58,
+              "pos_rate": 0.27885,
+              "model_pr_auc": 0.37317,
+              "model_brier": 0.19643,
+              "slot_dow_pr_auc": 0.28289,
+              "slot_dow_brier": 0.20486
+            },
+            {
+              "oblast": "Chernivetska oblast",
+              "n": 66,
+              "n_pos": 17,
+              "pos_rate": 0.25758,
+              "model_pr_auc": 0.39049,
+              "model_brier": 0.19877,
+              "slot_dow_pr_auc": 0.26261,
+              "slot_dow_brier": 0.44294
+            },
+            {
+              "oblast": "Dnipropetrovska oblast",
+              "n": 276,
+              "n_pos": 62,
+              "pos_rate": 0.22464,
+              "model_pr_auc": 0.30821,
+              "model_brier": 0.17194,
+              "slot_dow_pr_auc": 0.31165,
+              "slot_dow_brier": 0.1704
+            },
+            {
+              "oblast": "Donetska oblast",
+              "n": 177,
+              "n_pos": 74,
+              "pos_rate": 0.41808,
+              "model_pr_auc": 0.64132,
+              "model_brier": 0.21626,
+              "slot_dow_pr_auc": 0.52178,
+              "slot_dow_brier": 0.24328
+            },
+            {
+              "oblast": "Ivano-Frankivska oblast",
+              "n": 40,
+              "n_pos": 28,
+              "pos_rate": 0.7,
+              "model_pr_auc": 0.81185,
+              "model_brier": 0.21711,
+              "slot_dow_pr_auc": 0.7733,
+              "slot_dow_brier": 0.51275
+            },
+            {
+              "oblast": "Kharkivska oblast",
+              "n": 320,
+              "n_pos": 81,
+              "pos_rate": 0.25312,
+              "model_pr_auc": 0.38526,
+              "model_brier": 0.18394,
+              "slot_dow_pr_auc": 0.27962,
+              "slot_dow_brier": 0.18884
+            },
+            {
+              "oblast": "Khersonska oblast",
+              "n": 163,
+              "n_pos": 58,
+              "pos_rate": 0.35583,
+              "model_pr_auc": 0.63532,
+              "model_brier": 0.182,
+              "slot_dow_pr_auc": 0.34772,
+              "slot_dow_brier": 0.24403
+            },
+            {
+              "oblast": "Khmelnytska oblast",
+              "n": 79,
+              "n_pos": 16,
+              "pos_rate": 0.20253,
+              "model_pr_auc": 0.19824,
+              "model_brier": 0.16592,
+              "slot_dow_pr_auc": 0.29102,
+              "slot_dow_brier": 0.34702
+            },
+            {
+              "oblast": "Kirovohradska oblast",
+              "n": 242,
+              "n_pos": 46,
+              "pos_rate": 0.19008,
+              "model_pr_auc": 0.18916,
+              "model_brier": 0.15887,
+              "slot_dow_pr_auc": 0.19797,
+              "slot_dow_brier": 0.1593
+            },
+            {
+              "oblast": "Kyiv City",
+              "n": 146,
+              "n_pos": 31,
+              "pos_rate": 0.21233,
+              "model_pr_auc": 0.25582,
+              "model_brier": 0.17497,
+              "slot_dow_pr_auc": 0.18654,
+              "slot_dow_brier": 0.17447
+            },
+            {
+              "oblast": "Kyivska oblast",
+              "n": 217,
+              "n_pos": 42,
+              "pos_rate": 0.19355,
+              "model_pr_auc": 0.19766,
+              "model_brier": 0.15874,
+              "slot_dow_pr_auc": 0.16183,
+              "slot_dow_brier": 0.16462
+            },
+            {
+              "oblast": "Lvivska oblast",
+              "n": 105,
+              "n_pos": 15,
+              "pos_rate": 0.14286,
+              "model_pr_auc": 0.14255,
+              "model_brier": 0.12824,
+              "slot_dow_pr_auc": 0.22545,
+              "slot_dow_brier": 0.18392
+            },
+            {
+              "oblast": "Mykolaivska oblast",
+              "n": 291,
+              "n_pos": 58,
+              "pos_rate": 0.19931,
+              "model_pr_auc": 0.19427,
+              "model_brier": 0.16219,
+              "slot_dow_pr_auc": 0.20258,
+              "slot_dow_brier": 0.16353
+            },
+            {
+              "oblast": "Odeska oblast",
+              "n": 138,
+              "n_pos": 17,
+              "pos_rate": 0.12319,
+              "model_pr_auc": 0.21035,
+              "model_brier": 0.10677,
+              "slot_dow_pr_auc": 0.18303,
+              "slot_dow_brier": 0.1093
+            },
+            {
+              "oblast": "Poltavska oblast",
+              "n": 228,
+              "n_pos": 52,
+              "pos_rate": 0.22807,
+              "model_pr_auc": 0.3803,
+              "model_brier": 0.16961,
+              "slot_dow_pr_auc": 0.23118,
+              "slot_dow_brier": 0.18396
+            },
+            {
+              "oblast": "Rivnenska oblast",
+              "n": 87,
+              "n_pos": 12,
+              "pos_rate": 0.13793,
+              "model_pr_auc": 0.13477,
+              "model_brier": 0.12461,
+              "slot_dow_pr_auc": 0.278,
+              "slot_dow_brier": 0.12872
+            },
+            {
+              "oblast": "Sumska oblast",
+              "n": 227,
+              "n_pos": 63,
+              "pos_rate": 0.27753,
+              "model_pr_auc": 0.34334,
+              "model_brier": 0.19863,
+              "slot_dow_pr_auc": 0.28368,
+              "slot_dow_brier": 0.20788
+            },
+            {
+              "oblast": "Ternopilska oblast",
+              "n": 209,
+              "n_pos": 177,
+              "pos_rate": 0.84689,
+              "model_pr_auc": 0.99387,
+              "model_brier": 0.05958,
+              "slot_dow_pr_auc": 0.90071,
+              "slot_dow_brier": 0.13123
+            },
+            {
+              "oblast": "Vinnytska oblast",
+              "n": 92,
+              "n_pos": 9,
+              "pos_rate": 0.09783,
+              "model_pr_auc": 0.0664,
+              "model_brier": 0.10571,
+              "slot_dow_pr_auc": 0.11007,
+              "slot_dow_brier": 0.104
+            },
+            {
+              "oblast": "Volynska oblast",
+              "n": 183,
+              "n_pos": 59,
+              "pos_rate": 0.3224,
+              "model_pr_auc": 0.5049,
+              "model_brier": 0.20772,
+              "slot_dow_pr_auc": 0.44208,
+              "slot_dow_brier": 0.23445
+            },
+            {
+              "oblast": "Zaporizka oblast",
+              "n": 217,
+              "n_pos": 64,
+              "pos_rate": 0.29493,
+              "model_pr_auc": 0.32079,
+              "model_brier": 0.20814,
+              "slot_dow_pr_auc": 0.31864,
+              "slot_dow_brier": 0.21024
+            },
+            {
+              "oblast": "Zhytomyrska oblast",
+              "n": 150,
+              "n_pos": 32,
+              "pos_rate": 0.21333,
+              "model_pr_auc": 0.40516,
+              "model_brier": 0.15354,
+              "slot_dow_pr_auc": 0.28019,
+              "slot_dow_brier": 0.19468
+            }
+          ]
+        }
+      ],
+      "window_comparison_final_fold_post_hoc": [
+        {
+          "window_days": 365,
+          "n_train": 43911,
+          "pos_rate": 0.2793720873191072,
+          "pr_auc": 0.5608776574229203,
+          "brier": 0.16999286086244278,
+          "ece": 0.018021253920843514
+        },
+        {
+          "window_days": 730,
+          "n_train": 86338,
+          "pos_rate": 0.2793720873191072,
+          "pr_auc": 0.5526251863802312,
+          "brier": 0.1713211771694338,
+          "ece": 0.018807953047918855
+        },
+        {
+          "window_days": null,
+          "n_train": 178155,
+          "pos_rate": 0.2793720873191072,
+          "pr_auc": 0.5387587442336987,
+          "brier": 0.173671410415703,
+          "ece": 0.027243923632622482
+        }
+      ]
+    }
+  },
+  "meta": {
+    "horizon": "1h",
+    "pinned_commit": "22d0443d1d1cdf6a0a413c6d15c3078b5ed26127",
+    "seed": 42,
+    "last_record_end": "2026-10-15 03:44:15+00:00",
+    "last_t_utc": "2026-10-14 14:30:00+00:00",
+    "n_folds": 3,
+    "test_days": 28,
+    "gap_slots": 2,
+    "versions": {
+      "python": "3.14.7",
+      "numpy": "2.5.3",
+      "pandas": "3.0.5",
+      "scikit-learn": "1.9.1"
+    },
+    "runtime_s": 138.4
+  }
+}

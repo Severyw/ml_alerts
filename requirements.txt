@@ -1,0 +1,11 @@
+# Python 3.13. Versions below were the ones actually imported when the code
+# and tests in this repo were run in the development sandbox.
+pandas==3.0.5
+numpy==2.5.3
+scikit-learn==1.9.1
+matplotlib==3.11.2
+
+# NOT installable in the development sandbox (PyPI was blocked by the sandbox
+# proxy), so code that depends on these has NOT been run there. Lower bounds
+# only; re-pin to what you actually run after your first successful install.
+pytest>=8

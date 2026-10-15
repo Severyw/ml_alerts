@@ -1,0 +1,8 @@
+*.csv
+data/
+venv/
+_unexplained_preexisting_files/
+.idea/
+__pycache__/
+*.pyc
+.venv/data/
